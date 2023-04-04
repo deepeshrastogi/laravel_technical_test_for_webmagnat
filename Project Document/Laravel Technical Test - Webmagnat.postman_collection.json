@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "948deb8a-148c-4b0a-b563-9fbe8c1f35b4",
+		"name": "Laravel Technical Test - Webmagnat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24958784"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jens",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "attribute",
+									"value": "1,3",
+									"type": "text"
+								},
+								{
+									"key": "vat",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "product_image",
+									"type": "file",
+									"src": "/C:/Users/dell/Downloads/2e5251fd-955e-40de-a1bd-53fa128d92a1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}products",
+							"host": [
+								"{{local}}products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}products/13",
+							"host": [
+								"{{local}}products"
+							],
+							"path": [
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}products",
+							"host": [
+								"{{local}}products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}products/13",
+							"host": [
+								"{{local}}products"
+							],
+							"path": [
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attributes",
+			"item": [
+				{
+					"name": "Create attribute",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"attribute_name\" : \"color\",\"attribute_value\":\"Black\"}"
+						},
+						"url": {
+							"raw": "{{local}}attributes",
+							"host": [
+								"{{local}}attributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attributes list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNjgwNTk3MjYyLCJleHAiOjE2ODA2MTUyNjIsIm5iZiI6MTY4MDU5NzI2MiwianRpIjoiN0NuS2FXNzJmSGptN1V3SCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bB1Yu2sDy8jsWq_Yc3brq0ymfgJIDdvKYcTQbqYiJUM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"attribute_name\" : \"color\",\"attribute_value\":\"Black\"}"
+						},
+						"url": {
+							"raw": "{{local}}attributes",
+							"host": [
+								"{{local}}attributes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"deepesh@yopmail.com\",\r\n    \"password\":\"deepesh@123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}login",
+							"host": [
+								"{{local}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user  register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"deepesh rastogi\",\r\n    \"email\":\"deepesh@yopmail.com\",\r\n    \"password\":\"deepesh@123\",\r\n    \"confirm_password\":\"deepesh@123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{local}}signup",
+							"host": [
+								"{{local}}signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
